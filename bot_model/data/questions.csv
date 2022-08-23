@@ -1,0 +1,184 @@
+﻿questions,intent
+Tell me about yourself,1
+Describe yourself,1
+Walk me through your resume,19
+Tell me something about yourself that's not on your resume,1
+What is your greatest strength?,2
+What are you good at?,2
+What are your positive attributes,2
+What would your co-workers say you're good at?,2
+What are your weaknesses? ,3
+What do you think your coworkers would say you need to work on? ,15
+Where do yu think you fall short?,3
+"Tell me about a time you recieved negative feedback, how did you handle it?",3
+What do you consider to be your weaknesses,3
+What kind of personality do you work best with and why? ,4
+How would you describe the work environment,4
+What is your preferred work environment,4
+What type of work environment do you prefer?,4
+Why do you want this job?,5
+Why do you want to work at this company?,5
+What can you bring to this company?,6
+Why should we hire you?,6
+Why do you want this position?,5
+Why are you the best person for the job?,6
+What made this job appealing to you?,5
+Why do you think you deserve this job?,6
+What are you looking for in a job?,5
+Where would you like to be in your career five years from now? ,7
+Where would you like to be in your career to be in the future?,7
+Where do you see youreself in five years?,7
+What are your career aspirations?,7
+What makes you unique?,2
+Tell me about a time you failed,8
+Tell me about a time you tried to innovate something and it went wrong,8
+What attracted you to this company?,5
+What are you looking for in terms of career development?,7
+What salary are you seeking?,9
+What are your salary expectations?,9
+Where do you need to be in terms of salary?,9
+What do you expect in the way of salary?,9
+"What is your greatest failure, and what did you learn from it?",8
+How did you learn about this job?,10
+How did you hear about us?,10
+How did you hear aout this position?,10
+What brought you to this company?,10
+What are you looking for in a new position?,5
+Tell me about a time you made a mistake?,8
+What are you passionate about?,11
+What motivates you?,11
+Are you willing to relocate?,12
+Would you be willing to move?,12
+Do you prefer to working remotely?,12
+Tell us about yourself,1
+What is your greatest strengh?,2
+Tell me about a time you showed leadership?,13
+Why should we hire you?,6
+Why do you want to work here?,5
+Tell me about a time you were on a successful team,14
+What would your co-workers say about you?,15
+Where do you see yourself in 5 years?,7
+Tell me about a time you worked with a difficult person,16
+What is your leadership style?,13
+Tell me about a time you had to persuade someone,16
+Tell me about a time you created a goal and achieved it,8
+Tell me about a time you had to learn something quickly,17
+Could you tell me about yourself?,1
+How did you hear about this position?,10
+What type of work environment do you prefer?,4
+How do you deal with pressure or stressful situations?,17
+Do you prefer working independently or on a team?,20
+What did you do in the last year to improve your knowledge?,8
+What are your strengths?,2
+Why are you interested in working for us?,10
+Where do you see yourself in 5 years? 10 years?,7
+What can you offer us that someone else can not?,2
+What are some things your former manager would like you to improve on?,3
+Are you willing to relocate?,12
+Tell me about  an accomplishment you are most proud of? ,8
+Tell me about a time you made a mistake?,8
+How did you hear about this position?,10
+Discuss your resume,19
+Discuss your educational background,19
+Tell me about a time you handled a difficult situation,17
+Why should we hire you?,6
+What are your salary requirements?,9
+What was your biggest failure?,8
+What motivates you?,11
+How do you handle pressure?,18
+Are you leader or a follower?,20
+What questions haven't I asked you?,99
+What questions do you have for me?,99
+What makes you uncomfortable?,21
+Are you willing to go out of your comfort zone?,21
+What are your career goals?,7
+Are you willing to travel? ,12
+Are you overqualifed for this role? ,22
+Would you be willing to work nights and weekends? ,23
+What is the name of our CEO?,98
+What do you know about our company?,98
+What questions haven't I asked you? ,99
+Can you walk us through your resume?,19
+Why is our company interesting to you? ,5
+Who are our competitors?,98
+Why are you the right person for this job?,6
+What is your greatest personal achievement?,8
+How would you feel about reporting to a person younger than you,24
+Tell me about the last mistake you made?,8
+What makes you uncomfortable?,21
+What is your ideal working environment?,4
+What differentiates you from our other candidates?,2
+Are you more of a leader or a follower?,20
+What do you like most about yourself?,2
+Do you prefer working alone or on a team?,20
+What is your greatest fear?,97
+Tell me about yourself?,1
+What is your greatest weakness?,3
+What is your greatest strength?,2
+Tell me something that's not on your resume,1
+How will your greatest strength help you perform?,2
+How do you handle failure? ,8
+How do you handle stress and pressure?,18
+How would you describe yourself?,1
+Are you willing to fail?,8
+Describe your work ethic?,25
+Describe your work style?,25
+Do you work well with other people?,20
+How are you different from your competition?,2
+How does this job fit with your career aspirations? ,98
+What motivates you?,11
+Why are you interested in working for us?,10
+What can you offer us that someone else can not?,2
+Are you wiling to relocate?,11
+Are you wlling to travel?,11
+Discuss your resume,19
+What's your greatest weakness?,3
+What's your greatest strength?,2
+what are you weak at?,3
+what wouldn't you consider as your strong suit? ,3
+Why are you a good fit for this position?,6
+What makes you a good candidate for this position?,6
+What projects have you worked on?,70
+How would your previous employer describe you?,15
+What steps do you take when you encounter a problem at work?,96
+Are you currently interviewing with anyone else?,95
+Hi ,89
+Hi there,89
+Hello,89
+Bonjour!,89
+Do you have any personal projects?,70
+what skills you got?,50
+What type of skills do you have?,50
+What programming languages are you profecient in? ,50
+"Hi, it's nice to meet you!",89
+What level of education do you have?,60
+Where did you go to school?,60
+What is your highest level of education?,60
+What is a challenge you have faced at work before?,16
+How did you deal with a conflict at work in your past?,16
+What are your passions?,11
+Why do you want to work here?,5
+How are you today?,111
+What can I expect from you if I hired you?,6
+Do you have any hobbies?,11
+What is your favorite coding language?,50
+"So Ray, what are your hobbies?",11
+what's your strength,2
+What is your skillset? ,50
+What's your GPA?,55
+What was your GPA during college?,55
+How were your grades in college?,55
+what's your strength,2
+what do you do in your free time?,11
+Why are you applying for this position,92
+when can you start? ,52
+what's your major,60
+what is your major,60
+what are your interests?,50
+What is your preferred start date? ,52
+when would you like to start?,52
+Why are you interested in this position?,92
+Tell me about a time you had a conflict at work,16
+Can I get a link to your blog?, 44
+What's the URL to your blog?, 44
+what kind of projects are you working on?, 70
