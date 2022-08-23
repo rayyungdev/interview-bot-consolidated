@@ -24,4 +24,13 @@ def user():
     response = raymond_bot.respond(data)
     return response[0]
 
-app.run(debug=True)
+def run():
+  CORS(app, resources={r"/api/*": {"origins":"*"}})
+  app.run(host = '0.0.0.0', port=8080, ssl_context='adhoc')
+  
+def keep_alive():
+  t = Thread(target = run())
+  t.start()
+
+if __name__ == '__main__':
+  run()

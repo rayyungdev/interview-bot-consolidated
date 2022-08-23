@@ -39,5 +39,5 @@ MANIFEST
 __pycache__/
 *.py[cod]
 *$py.class
-
+config.py
 .vector_cache
