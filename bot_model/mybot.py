@@ -2,7 +2,6 @@ import sys
 import pandas as pd
 import spacy
 import pickle
-
 from bot_model.utils import * 
 
 nlp = spacy.load('en_core_web_md')
@@ -18,8 +17,17 @@ loaded_transformer = pickle.load(open(transformer, 'rb'))
 
 
 fanswers = parent_name+'/data/answers.csv'
-df_answers = pd.read_csv(fanswers, encoding='cp1252')
+fquestions = parent_name+'/data/questions.csv'
 
+df_answers = pd.read_csv(fanswers, encoding='cp1252')
+df_questions = pd.read_csv(fquestions)
+df_questions = df_questions.drop_duplicates('intent', keep = 'first')
+df_questions['intent'] = df_questions['intent'].astype(str)
+df_questions = df_questions.set_index('intent')['questions']
+
+
+
+default_response ='Ah it seems like you asked me something that I was not prepared to answer!\nIf you think I should have a better response for this, let me know by labeling it as misclassified'
 def question_add(data):
     misclassified_csv = parent_name + '/data/misclassified_questions.csv'
     question_data = {
@@ -36,6 +44,28 @@ class interview_bot:
         self.model = loaded_model
         self.transformer = loaded_transformer
         self.responses = df_answers
+        self.questions = df_questions
+
+    def predict(self, n):
+        try:
+            n = remove_punctuation(n)
+            encoded_sen = encode_sentence(n.lower())
+            prob = np.max(self.model.predict_proba(encoded_sen)[0])
+            if prob > 0.6:
+                prediction = self.model.predict(encoded_sen)
+                ypred = self.transformer.inverse_transform(prediction)
+                response = self.responses.loc[self.responses['intent_v']==ypred[0]]
+                ypred = str(response.intent.item())
+
+            else: 
+                ypred = "999"
+    
+            return ypred
+        
+        except Exception as e:
+            error = "something happened at: ", e
+            print(error)
+
 
     def respond(self, n):
         try:
@@ -48,14 +78,15 @@ class interview_bot:
                 response = self.responses.loc[self.responses['intent_v']==ypred[0]]
                 output= response.response.item(), response.intent.item()
             else: 
-                question_add(n)
-                default_response = f'Ah it seems like you asked me something that I was not prepared to answer!\nIf you think I should have a better response for this, let me know by labeling it as misclassified'
-                output = default_response, 'UNKNOWN'
+                output = default_response, 'DEFAULT '
             return output
+
         except Exception as e:
             error = "something happened at: ", e
             print(error)
             return 'Sorry, something went wrong...', e
+
+
 if __name__ == '__main__':
     print('Hello, this is the Raymond Interview Bot')
     print('Please ask me some basic interview questions and I will try my best to help you\n    If no input is detected, this program will end\n')

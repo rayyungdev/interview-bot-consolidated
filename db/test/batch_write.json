@@ -1,0 +1,19 @@
+{
+    "AnswersTable": [
+      {
+        "PutRequest": {
+          "Item":
+          {
+            "ID": {
+              "S": "d8asdfd0doqererjdj"
+            },
+            "NAME": {
+              "S": "Billy Jean"
+            },
+            "1": {
+                "S":"I like things"            }
+          }
+        }
+      }
+    ]
+}

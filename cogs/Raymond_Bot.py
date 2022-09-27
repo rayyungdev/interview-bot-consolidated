@@ -28,6 +28,8 @@ class Raymond_Bot(commands.Cog, description = 'Hello World'):
         if not message.content.startswith('!'):
             userinput = message.content
             response = raymond_bot.respond(userinput)
+            if response[1] == 'UNKNOWN':
+                question_add(userinput)
             await message.channel.send(response[0] + added_response)
 
     @commands.command(brief = "use this command if the question was misclassified")

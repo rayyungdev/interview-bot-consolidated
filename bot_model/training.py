@@ -42,19 +42,7 @@ df_set['intent'] = df_set['intent'].apply(lambda x: df_answers.loc[df_answers['i
 
 lengths = df_set['questions'].str.len().max() # It's 75
 #So let's just set our vector size to be 100
-max_length = 100
-df_set
-
-# %%
-import matplotlib.pyplot as plt
-label_dist = df_set['intent'].apply(lambda x: str(x))
-plt.hist(label_dist)
-plt.title('Histogram of Intent Labels')
-plt.xlabel('Intent Types')
-plt.ylabel('Frequency')
-
-# %%
-### Let's just get something work, let's test it with two methods
+max_length = 100### Let's just get something work, let's test it with two methods
 import spacy
 nlp = spacy.load('en_core_web_md')
 embedding_dim = nlp.vocab.vectors_length
