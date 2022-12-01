@@ -49,7 +49,7 @@ What are you passionate about?,11
 What motivates you?,11
 Are you willing to relocate?,12
 Would you be willing to move?,12
-Do you prefer to working remotely?,12
+Do you prefer to working remotely?,31
 Tell us about yourself,1
 What is your greatest strengh?,2
 Tell me about a time you showed leadership?,13
@@ -74,7 +74,6 @@ Why are you interested in working for us?,10
 Where do you see yourself in 5 years? 10 years?,7
 What can you offer us that someone else can not?,2
 What are some things your former manager would like you to improve on?,3
-Are you willing to relocate?,12
 Tell me about  an accomplishment you are most proud of? ,8
 Tell me about a time you made a mistake?,8
 How did you hear about this position?,10
@@ -92,7 +91,7 @@ What questions do you have for me?,99
 What makes you uncomfortable?,21
 Are you willing to go out of your comfort zone?,21
 What are your career goals?,7
-Are you willing to travel? ,12
+Are you willing to travel? ,31
 Are you overqualifed for this role? ,22
 Would you be willing to work nights and weekends? ,23
 What is the name of our CEO?,98
@@ -130,7 +129,6 @@ What motivates you?,11
 Why are you interested in working for us?,10
 What can you offer us that someone else can not?,2
 Are you wiling to relocate?,11
-Are you wlling to travel?,11
 Discuss your resume,19
 What's your greatest weakness?,3
 What's your greatest strength?,2
@@ -164,11 +162,11 @@ Do you have any hobbies?,11
 What is your favorite coding language?,50
 "So Ray, what are your hobbies?",11
 what's your strength,2
+what's your weakness,3
 What is your skillset? ,50
 What's your GPA?,55
 What was your GPA during college?,55
 How were your grades in college?,55
-what's your strength,2
 what do you do in your free time?,11
 Why are you applying for this position,92
 when can you start? ,52

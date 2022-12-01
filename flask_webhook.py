@@ -1,4 +1,3 @@
-from crypt import methods
 from flask import Flask, jsonify, request
 import flask
 import flask_praetorian
@@ -14,9 +13,9 @@ from db.dynamo_setup import *
 load_dotenv()
 guard = flask_praetorian.Praetorian()
 cors = flask_cors.CORS()
-
 added_response = "\n\n*If you think my response was misclassified, use the command* `!misclassified` *to add your question to the database*"
 instructions = "\n\nPlease help me to build my question dataset by using the command `!misclassified` when you think an answer is misclassified or if you think I should have answer to your question"
+
 class hook_bot(interview_bot):
     def __init__(self):
         interview_bot.__init__(self)
@@ -77,7 +76,6 @@ guard.init_app(app, User)
 # Initialize a local database for the example
 app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(os.getcwd(), 'database.db')}"
 db.init_app(app)
-
 cors.init_app(app)
 
 with app.app_context():
@@ -89,6 +87,7 @@ with app.app_context():
           roles='test'
             ))
     db.session.commit()
+
 
 # Set up some routes for the example
 @app.route('/api/')
@@ -164,6 +163,7 @@ def protected():
          -H "Authorization: Bearer <your_token>"
     """
     user_id = flask_praetorian.current_user().id
+    print(user_id)
     answers = True if len(get_answers(user_id)) > 1 else False
     if user_id is None: 
         return {'message': 'user not found'}, 404

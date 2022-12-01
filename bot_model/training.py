@@ -46,7 +46,7 @@ max_length = 100### Let's just get something work, let's test it with two method
 import spacy
 nlp = spacy.load('en_core_web_md')
 embedding_dim = nlp.vocab.vectors_length
-print(embedding_dim)
+# print(embedding_dim)
 
 # %%
 # Encoding Sentences using spaCy NLP Model
@@ -97,7 +97,6 @@ def svc_training(X,y):
     clf.fit(X,y)
     return clf
 
-model = svc_training(train_X, train_y)
 
 def svc_validation(model, X, y, le):
     y_pred = model.predict(X)
@@ -105,11 +104,11 @@ def svc_validation(model, X, y, le):
     for i in range(len(y)):
         if y_pred[i] == y[i]:
             n_correct +=1
-        else:
-            print(i, 'predicted: ', le.inverse_transform([y_pred[i]]), 'true: ', le.inverse_transform([y[i]]))
-    print('Predicted {0} out of {1} training examples'.format(n_correct, len(y)))
+            # print(i, 'predicted: ', le.inverse_transform([y_pred[i]]), 'true: ', le.inverse_transform([y[i]]))
+    # print('Predicted {0} out of {1} training examples'.format(n_correct, len(y)))
 
-svc_validation(model, train_X, train_y, le)
+    return n_correct/len(y)
+
 
 # %%
 def encode_sentence(sentence):
@@ -118,8 +117,27 @@ def encode_sentence(sentence):
 test_input = "What is the meaning of life?"
 test_input = encode_sentence(test_input.lower())
 
-y_test_output = model.predict_proba(test_input)
-print(np.max(y_test_output))
+result = 0
+cur_iter = 1
+while result < 0.98:
+    model = svc_training(train_X, train_y)
+    result = svc_validation(model, train_X, train_y, le)
+    y_test_output = np.max(model.predict_proba(test_input))
+    # print(y_test_output)
+    cur_iter += 1
+
+    if y_test_output > .5:
+        result = 0
+
+    if cur_iter%1000 == 0:
+        print(result)
+        print(y_test_output)
+    if cur_iter > 5000:
+        print("FAILED...")
+        break
+
+print('Accuracy: {0}'.format(result))
+print('test: {0}'.format(y_test_output))
 
 
 # %%

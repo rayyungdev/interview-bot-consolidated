@@ -1,6 +1,5 @@
 import flask_sqlalchemy
 import uuid
-from sqlalchemy.dialects.postgresql import UUID
 
 # A generic user model that might be used by an app powered by flask-praetorian
 db = flask_sqlalchemy.SQLAlchemy()
